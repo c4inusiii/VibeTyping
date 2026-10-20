@@ -1,0 +1,63 @@
+
+== Смоук-тест фронтенда (http://localhost:8799) ==
+
+  ok  регистрация возвращает 200
+  ok  регистрация возвращает token
+  ok  регистрация возвращает levelInfo
+  ok  регистрация возвращает streak
+  ok  повторная регистрация даёт 409 email_taken
+  ok  неверный пароль даёт 401 bad_credentials
+  ok  вход возвращает 200
+  ok  вход возвращает token
+  ok  /api/auth/me отдаёт пользователя
+  ok  у пользователя есть levelInfo
+  ok  /api/train/text mode=words отдаёт текст
+  ok  /api/train/text mode=sentences отдаёт текст
+  ok  /api/train/text mode=code отдаёт текст
+  ok  symbols закрыт для пользователя 1-го уровня (ожидаем 403)
+  ok  symbols заблокирован без auth-уровня
+  ok  code с variant=python возвращает variant
+  ok  сессия принята (200)
+  ok  сессия начислила XP
+  ok  сессия вернула levelInfo
+  ok  сессия вернула streak
+  ok  сессия вернула unlockedAchievements
+  ok  сессия вернула user
+  ok  XP пользователя вырос
+  ok  /api/profile отдаёт 200
+  ok  profile.summary.totalSessions = 1
+  ok  profile.summary.totalChars = 300
+  ok  profile.summary.totalErrors = 12
+  ok  profile.byDay содержит сегодня
+  ok  profile.byMode содержит words
+  ok  profile.keyErrors содержит "о"
+  ok  profile.recent содержит сессию
+  ok  profile.achievements — массив
+  ok  profile.recommendations — массив
+  ok  /api/profile/drill отдаёт текст
+  ok  /api/leaderboard sort=wpm отдаёт строки
+  ok  /api/leaderboard sort=wpm содержит меня
+  ok  /api/leaderboard sort=wpm ранжирует строки
+  ok  /api/leaderboard sort=accuracy отдаёт строки
+  ok  /api/leaderboard sort=accuracy содержит меня
+  ok  /api/leaderboard sort=accuracy ранжирует строки
+  ok  /api/leaderboard sort=xp отдаёт строки
+  ok  /api/leaderboard sort=xp содержит меня
+  ok  /api/leaderboard sort=xp ранжирует строки
+  ok  leaderboard period=today работает
+  ok  /api/achievements отдаёт список
+  ok  ach_combo_1000 ещё закрыт (комбо 34 < 1000)
+  ok  /api/profile без токена даёт 401
+  ok  /api/auth/me без токена даёт 401
+  ok  /api/train/session без токена даёт 401
+  ok  Express раздаёт index.html
+  ok  SPA-роут /profile отдаёт index.html
+  ok  второй пользователь зарегистрирован
+  ok  пользователь без сессий не попадает в рейтинг
+  ok  в таблице лидеров два участника
+  ok  второй оператор появился в рейтинге
+  ok  symbols открывается на 5-м уровне
+  ok  уровень вырос до 5
+
+== Итог: 57 ok, 0 fail ==
+

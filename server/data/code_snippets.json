@@ -1,0 +1,26 @@
+{
+  "python": [
+    "def calc_damage(base, crit, mult=1.0):\n    total = base * mult\n    if crit:\n        total *= 2.0\n    return round(total, 2)",
+    "class Hero:\n    def __init__(self, name, hp=100):\n        self.name = name\n        self.hp = hp\n\n    def heal(self, amount):\n        self.hp += amount\n        return self.hp",
+    "def load_config(path):\n    with open(path, 'r') as fh:\n        data = fh.read()\n    return data.strip().split('\\n')",
+    "for i in range(10):\n    if i % 2 == 0:\n        print(f'even {i}')\n    else:\n        print(f'odd {i}')",
+    "import asyncio\n\nasync def fetch_all(urls):\n    tasks = [asyncio.create_task(fetch(u)) for u in urls]\n    return await asyncio.gather(*tasks)"
+  ],
+  "javascript": [
+    "function calculateDamage(base, crit, mult = 1.0) {\n  let total = base * mult;\n  if (crit) {\n    total *= 2.0;\n  }\n  return total.toFixed(2);\n}",
+    "const hero = {\n  name: 'Nova',\n  hp: 100,\n  heal(amount) {\n    this.hp += amount;\n    return this.hp;\n  }\n};",
+    "async function fetchAll(urls) {\n  const responses = await Promise.all(\n    urls.map((u) => fetch(u))\n  );\n  return responses.map((r) => r.json());\n}",
+    "function filterEven(arr) {\n  return arr.filter((n) => n % 2 === 0);\n}\n\nconst nums = [1, 2, 3, 4, 5, 6];\nconsole.log(filterEven(nums));",
+    "class Quest {\n  constructor(title, reward) {\n    this.title = title;\n    this.reward = reward;\n  }\n\n  complete() {\n    return 'Quest done: ' + this.title;\n  }\n}"
+  ],
+  "html": [
+    "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <title>Print Hero</title>\n  </head>\n  <body>\n    <main id=\"app\">\n      <h1>Hello, hero!</h1>\n    </main>\n  </body>\n</html>",
+    "<div class=\"panel\">\n  <header class=\"panel__head\">\n    <h2>Achievements</h2>\n  </header>\n  <ul class=\"badge-list\">\n    <li class=\"badge badge--gold\">Speed demon</li>\n    <li class=\"badge badge--violet\">Combo master</li>\n  </ul>\n</div>",
+    "<form class=\"login\" action=\"/auth\" method=\"post\">\n  <label for=\"email\">Email</label>\n  <input id=\"email\" name=\"email\" type=\"email\" required />\n  <label for=\"pass\">Password</label>\n  <input id=\"pass\" name=\"pass\" type=\"password\" required />\n  <button type=\"submit\">Enter</button>\n</form>"
+  ],
+  "css": [
+    ".hero-card {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n  padding: 16px 20px;\n  border-radius: 12px;\n  background: rgba(10, 10, 18, 0.85);\n}\n\n.hero-card__title {\n  font-size: 18px;\n  font-weight: 700;\n  color: #7df9ff;\n}",
+    "@keyframes pulse {\n  0% {\n    transform: scale(1);\n    opacity: 0.9;\n  }\n  50% {\n    transform: scale(1.08);\n    opacity: 1;\n  }\n  100% {\n    transform: scale(1);\n    opacity: 0.9;\n  }\n}",
+    ".grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));\n  gap: 14px;\n}\n\n@media (max-width: 640px) {\n  .grid {\n    grid-template-columns: 1fr;\n  }\n}"
+  ]
+}

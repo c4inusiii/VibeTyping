@@ -1,0 +1,256 @@
+/* ---------------- Auth ---------------- */
+
+.auth {
+  min-height: calc(100vh - 62px);
+  display: grid;
+  place-items: center;
+  padding: 40px 20px;
+}
+
+.auth__box {
+  width: min(420px, 100%);
+  animation: resultIn 0.45s cubic-bezier(0.2, 1.2, 0.4, 1);
+}
+
+.auth__title {
+  font-family: var(--display);
+  font-size: 30px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin: 0 0 6px;
+  text-shadow: 0 0 26px rgba(125, 249, 255, 0.5);
+}
+
+.auth__tagline {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  margin: 0 0 26px;
+}
+
+.auth__tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+
+.auth__tab {
+  flex: 1;
+  padding: 8px;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.16s ease;
+}
+
+.auth__tab--active {
+  border-color: var(--border-strong);
+  color: #fff;
+  background: rgba(125, 249, 255, 0.12);
+  box-shadow: 0 0 18px rgba(125, 249, 255, 0.22);
+}
+
+.auth__social {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 9px;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: rgba(8, 9, 17, 0.7);
+  color: var(--text);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  transition: all 0.16s ease;
+}
+
+.social:hover {
+  border-color: var(--border-strong);
+  background: rgba(125, 249, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.social__icon {
+  font-size: 15px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-dim);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 16px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ---------------- User chip ---------------- */
+
+.userchip {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 4px 10px 4px 4px;
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  background: rgba(8, 9, 17, 0.7);
+}
+
+.userchip__avatar {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--display);
+  font-size: 12px;
+  font-weight: 900;
+  color: #06060d;
+  background: linear-gradient(135deg, var(--neon), var(--neon-2));
+}
+
+.userchip__name {
+  font-size: 12px;
+  color: var(--text);
+}
+
+.userchip__level {
+  font-size: 10px;
+  color: var(--neon);
+  font-weight: 800;
+}
+
+/* ---------------- Toast ---------------- */
+
+.toasts {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  z-index: 80;
+}
+
+.toast {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid var(--border-strong);
+  background: rgba(12, 14, 26, 0.96);
+  color: var(--text);
+  font-size: 12px;
+  box-shadow: 0 0 26px rgba(125, 249, 255, 0.2);
+  animation: toastIn 0.32s cubic-bezier(0.2, 1.3, 0.4, 1);
+  max-width: 320px;
+}
+
+.toast--gold {
+  border-color: rgba(255, 194, 71, 0.5);
+  color: var(--gold);
+  box-shadow: 0 0 26px rgba(255, 194, 71, 0.25);
+}
+
+.toast--error {
+  border-color: rgba(255, 46, 99, 0.5);
+  color: #ff8fa8;
+}
+
+@keyframes toastIn {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ---------------- Utility ---------------- */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.muted {
+  color: var(--text-dim);
+  font-size: 12px;
+}
+
+.center {
+  text-align: center;
+}
+
+.empty {
+  padding: 34px 18px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.loader {
+  display: grid;
+  place-items: center;
+  min-height: 240px;
+  color: var(--neon);
+  font-family: var(--display);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.loader::after {
+  content: '';
+  width: 34px;
+  height: 34px;
+  margin-top: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(125, 249, 255, 0.2);
+  border-top-color: var(--neon);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

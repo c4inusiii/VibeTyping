@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>seed</title>
+  </head>
+  <body>
+    <p>Создание сессии…</p>
+    <script>
+      const params = new URLSearchParams(location.search);
+      const token = params.get('t');
+      const to = params.get('to') || '/train';
+      if (token) {
+        localStorage.setItem('pth.token', token);
+      }
+      location.replace(to);
+    </script>
+  </body>
+</html>

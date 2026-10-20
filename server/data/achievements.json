@@ -1,0 +1,80 @@
+[
+  {
+    "achievement_id": "ach_speed_300",
+    "title": "Печатный гений",
+    "description": "Достичь чистой скорости 300 WPM в режиме «Слова» при точности не менее 95%",
+    "category": "speed",
+    "metric": "session_wpm",
+    "metric_target": 300,
+    "metric_min_accuracy": 95,
+    "metric_mode": "words",
+    "reward_xp": 1000,
+    "icon_asset": "/assets/icons/bach_speed_300.svg",
+    "icon_tone": "violet",
+    "icon": "bolt"
+  },
+  {
+    "achievement_id": "ach_combo_1000",
+    "title": "Стальной палец",
+    "description": "Набрать 1000 символов подряд без единой ошибки",
+    "category": "combo",
+    "metric": "max_combo",
+    "metric_target": 1000,
+    "reward_xp": 500,
+    "icon_asset": "/assets/icons/ach_combo_1000.svg",
+    "icon_tone": "silver",
+    "icon": "shield"
+  },
+  {
+    "achievement_id": "ach_mode_code",
+    "title": "Ночной кодер",
+    "description": "Завершить 50 тренировок в режиме «Код» в период с 22:00 до 06:00",
+    "category": "custom",
+    "metric": "night_code_sessions",
+    "metric_target": 50,
+    "reward_xp": 750,
+    "icon_asset": "/assets/icons/ach_mode_code.svg",
+    "icon_tone": "green",
+    "icon": "mask"
+  },
+  {
+    "achievement_id": "ach_perfect_100",
+    "title": "Идеальный баланс",
+    "description": "Пройти режим «Предложения» длительностью не менее 60 секунд со 100% точностью",
+    "category": "accuracy",
+    "metric": "perfect_sentence_session",
+    "metric_target": 1,
+    "metric_min_duration": 60,
+    "metric_mode": "sentences",
+    "metric_min_accuracy": 100,
+    "reward_xp": 1200,
+    "icon_asset": "/assets/icons/ach_perfect_100.svg",
+    "icon_tone": "gold",
+    "icon": "scales"
+  },
+  {
+    "achievement_id": "ach_streak_7",
+    "title": "Постоянный герой",
+    "description": "Поддерживать 7-дневный ударный режим: минимум 3 тренировки каждый день",
+    "category": "streak",
+    "metric": "daily_streak",
+    "metric_target": 7,
+    "metric_min_sessions_per_day": 3,
+    "reward_xp": 900,
+    "icon_asset": "/assets/icons/ach_streak_7.svg",
+    "icon_tone": "ember",
+    "icon": "calendar"
+  },
+  {
+    "achievement_id": "ach_any_future_id",
+    "title": "Имя Новой Ачивки",
+    "description": "Условие получения",
+    "category": "custom",
+    "metric": "total_xp",
+    "metric_target": 2500,
+    "reward_xp": 2500,
+    "icon_asset": "/assets/icons/future_badge.svg",
+    "icon_tone": "cyan",
+    "icon": "star"
+  }
+]

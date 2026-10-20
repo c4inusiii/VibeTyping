@@ -1,0 +1,56 @@
+
+== health ==
+  ok  health 200
+
+== register ==
+  ok  register 200
+  ok  token issued
+  ok  levelInfo present
+
+== login ==
+  ok  login 200
+  ok  login rejects wrong password
+
+== train text ==
+  ok  words 200
+  ok  words non-empty
+  ok  code 200
+  ok  code has python
+  ok  sentences en 200
+  ok  symbols locked at lvl1 (403)
+
+== train session ==
+  ok  session 200
+  ok  xp earned > 0
+  ok  total xp grew
+  ok  unlocked list is array
+
+== profile ==
+  ok  profile 200
+  ok  summary.sessions = 1
+  ok  summary.chars = 400
+  ok  keyErrors recorded
+  ok  achievements listed
+  ok  recommendation for о/л
+
+== drill ==
+  ok  drill 200
+
+== leaderboard ==
+  ok  leaderboard 200
+  ok  rows include me
+  ok  me pinned with rank
+
+== achievements spec ==
+  ok  achievements 200
+  ok  spec ach_speed_300 present
+  ok  spec ach_combo_1000 present
+  ok  spec ach_mode_code present
+  ok  spec ach_perfect_100 present
+  ok  spec ach_streak_7 present
+
+== auth guard ==
+  ok  profile without token 401
+
+ALL TESTS PASSED
+
